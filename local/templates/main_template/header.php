@@ -20,7 +20,6 @@
 			$pageAsset->addString("<link rel='stylesheet' href='" . SITE_TEMPLATE_PATH . "/css/woocommerce-smallscreen.css' type='text/css' media='only screen and (max-width: 768px)'/>");
 			$pageAsset->addString("<link rel='stylesheet' href='" . SITE_TEMPLATE_PATH . "/css/woocommerce.css' type='text/css' media='all'/>");
 			$pageAsset->addString("<link rel='stylesheet' href='" . SITE_TEMPLATE_PATH . "/css/font-awesome.min.css' type='text/css' media='all'/>");
-			$pageAsset->addString("<link rel='stylesheet' href='" . SITE_TEMPLATE_PATH . "/style.css' type='text/css' media='all'/>");
 			$pageAsset->addString("<link rel='stylesheet' href='" . SITE_TEMPLATE_PATH . "/css/easy-responsive-shortcodes.css' type='text/css' media='all'/>");
 
 			$pageAsset->addJs(SITE_TEMPLATE_PATH . '/js/jquery.js');
