@@ -49,28 +49,22 @@
 							]
 						);?>
 					</div>
-					<nav id="site-navigation" class="main-navigation">
-						<button class="menu-toggle">Menu</button>
-						<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-						<div class="menu-menu-1-container">
-							<ul id="menu-menu-1" class="menu">
-								<li><a href="/">Home</a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="shop.html">Shop</a></li>
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="elements.html">Elements</a></li>
-								<li><a href="#">Pages</a>
-									<ul class="sub-menu">
-										<li><a href="portfolio-item.html">Portfolio Item</a></li>
-										<li><a href="blog-single.html">Blog Article</a></li>
-										<li><a href="shop-single.html">Shop Item</a></li>
-										<li><a href="portfolio-category.html">Portfolio Category</a></li>
-									</ul>
-								</li>
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
-						</div>
-					</nav>
+					<?php $APPLICATION->IncludeComponent(
+						'bitrix:menu',
+						'main_menu',
+						[
+							'ALLOW_MULTI_SELECT' => 'N',
+							'CHILD_MENU_TYPE' => 'left',
+							'DELAY' => 'N',
+							'MAX_LEVEL' => '2',
+							'MENU_CACHE_GET_VARS' => [0=>'',],
+							'MENU_CACHE_TIME' => '3600',
+							'MENU_CACHE_TYPE' => 'A',
+							'MENU_CACHE_USE_GROUPS' => 'Y',
+							'ROOT_MENU_TYPE' => 'top',
+							'USE_EXT' => 'N'
+						]
+					);?>
 				</header>
 				<!-- #masthead -->
 				<div id="content" class="site-content">
