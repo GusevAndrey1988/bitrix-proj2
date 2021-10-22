@@ -1,3 +1,9 @@
+<?php
+	if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
+	{
+		die();
+	}
+?>
 				</div>
 				<!-- #content -->
 			</div>
@@ -13,9 +19,7 @@
 			<a href="#top" class="smoothup" title="Back to top"><span class="genericon genericon-collapse"></span></a>
 		</div>
 		<!-- #page -->
-		<script src='js/jquery.js'></script>
-		<script src='js/plugins.js'></script>
-		<script src='js/scripts.js'></script>
-		<script src='js/masonry.pkgd.min.js'></script>
+		<script src='<?=SITE_TEMPLATE_PATH?>/js/plugins.js'></script>
+		<script src='<?=SITE_TEMPLATE_PATH?>/js/scripts.js'></script>
 	</body>
 </html>
