@@ -29,7 +29,17 @@
 		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500,700%7CHerr+Von+Muellerhoff:400,500,700%7CQuattrocento+Sans:400,500,700' type='text/css' media='all'/>
 	</head>
 	
-	<body class="home page page-template page-template-template-portfolio page-template-template-portfolio-php">
+	<?php
+		$request = \Bitrix\Main\Context::getCurrent()->getRequest();
+		$requestedDir = $request->getRequestedPageDirectory();
+	?>
+	<?php if ($requestedDir === '/shop'):?>
+		<body class="archive post-type-archive post-type-archive-product woocommerce woocommerce-page">
+	<?php elseif ($requestedDir === '/blog'):?>
+		<body class="blog">
+	<?php else:?>
+		<body class="home page page-template page-template-template-portfolio page-template-template-portfolio-php">
+	<?php endif?>
 		<div id="panel">
 			<?php $APPLICATION->ShowPanel()?>
 		</div>

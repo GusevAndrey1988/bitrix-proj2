@@ -9,21 +9,21 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"About", 
-		"", 
+		"/about.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Shop", 
-		"", 
+		"/shop", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Blog", 
-		"", 
+		"/blog", 
 		Array(), 
 		Array(), 
 		"" 
@@ -44,7 +44,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Contact", 
-		"", 
+		"/contact.php", 
 		Array(), 
 		Array(), 
 		"" 

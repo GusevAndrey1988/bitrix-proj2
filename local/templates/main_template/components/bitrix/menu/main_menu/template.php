@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+use Bitrix\Main\Localization\Loc;
 
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
 {
@@ -8,8 +10,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
 
 <?php if (!empty($arResult)):?>
 	<nav id="site-navigation" class="main-navigation">
-		<button class="menu-toggle">Menu</button>
-		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+		<button class="menu-toggle"><?=Loc::getMessage("MAIN_MENU_TOGGLE_BUTTON")?></button>
+		<a class="skip-link screen-reader-text" href="#content"><?=Loc::getMessage('MAIN_MENU_SKIP_TO_CONTENT')?></a>
 		<div class="menu-menu-1-container">
 			<ul id="menu-menu-1" class="menu">
 				<?php $previousLevel = 0;?>
@@ -26,7 +28,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
 						<?php if ($arItem["PERMISSION"] > "D"):?>
 							<li><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
 						<?php else:?>
-							<li><a href="" title="<?=GetMessage("MENU_ITEM_ACCESS_DENIED")?>"><?=$arItem["TEXT"]?></a></li>
+							<li><a href="" title="<?=Loc::getMessage("MAIN_MENU_ITEM_ACCESS_DENIED")?>"><?=$arItem["TEXT"]?></a></li>
 						<?php endif?>
 					<?php endif?>
 
