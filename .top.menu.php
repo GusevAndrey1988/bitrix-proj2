@@ -16,28 +16,28 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Shop", 
-		"/shop", 
+		"/shop/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Blog", 
-		"/blog", 
+		"/blog/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Elements", 
-		"", 
+		"/elements.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Pages", 
-		"", 
+		"/pages/", 
 		Array(), 
 		Array(), 
 		"" 
