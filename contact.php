@@ -9,30 +9,54 @@
                 <div class="entry-content">
                         
                     <!-- BEGIN MAP -->
-                    <p><script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-                    <div style='overflow:hidden;height:380px;width:100%;'>
-                    <div id='gmap_canvas' style='height:380px;width:100%;'></div>
-                    <div>embed google maps</a></div>
-                    <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
-                    </div>
-                    <p><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(3.4000221,-76.387969),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(3.4000221,-76.387969)});infowindow = new google.maps.InfoWindow({content:'<strong>Jane Photography</strong><br />Florida Beach<br />'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script></p>
+                    <?php $APPLICATION->IncludeComponent(
+                        'bitrix:map.google.view', 
+                        '.default', 
+                        array(
+                            'API_KEY' => '',
+                            'CONTROLS' => array(
+                                0 => 'SMALL_ZOOM_CONTROL',
+                                1 => 'TYPECONTROL',
+                            ),
+                            'INIT_MAP_TYPE' => 'TERRAIN',
+                            'MAP_DATA' => 'a:3:{s:10:\'google_lat\';s:7:\'55.7383\';s:10:\'google_lon\';s:7:\'37.5946\';s:12:\'google_scale\';i:13;}',
+                            'MAP_HEIGHT' => '380',
+                            'MAP_ID' => '',
+                            'MAP_WIDTH' => 'auto',
+                            'OPTIONS' => array(
+                                0 => 'ENABLE_SCROLL_ZOOM',
+                                1 => 'ENABLE_DBLCLICK_ZOOM',
+                                2 => 'ENABLE_DRAGGING',
+                                3 => 'ENABLE_KEYBOARD',
+                            ),
+                            'COMPONENT_TEMPLATE' => '.default'
+                        ),
+                        false
+                    );?>
                     <!-- END MAP -->
                         
                     <div class="wpcmsdev-columns">
                         <div class="column column-width-one-half">
                             <h4>Quick Contact</h4>						
                             
-                            <form class="wpcf7" method="post" action="contact.php" id="contactform">
-                                <div class="form">
-                                    <p><input type="text" name="name" placeholder="Name *"></p>
-                                    <p><input type="text" name="email" placeholder="E-mail Address *"></p>
-                                    <p><textarea name="comment" rows="3" placeholder="Message *"></textarea></p>
-                                    <input type="submit" id="submit" class="clearfix btn" value="Send">
-                                </div>
-                            </form>
-                            <div class="done">								
-                                Your message has been sent. Thank you!
-                            </div>
+                            <?php $APPLICATION->IncludeComponent(
+                                'bitrix:main.feedback', 
+                                'quick_contact_form', 
+                                array(
+                                    'EMAIL_TO' => 'gusevandrey1988@gmail.com',
+                                    'EVENT_MESSAGE_ID' => array(
+                                    ),
+                                    'OK_TEXT' => 'Your message has been sent. Thank you!',
+                                    'REQUIRED_FIELDS' => array(
+                                        0 => 'NAME',
+                                        1 => 'EMAIL',
+                                        2 => 'MESSAGE',
+                                    ),
+                                    'USE_CAPTCHA' => 'Y',
+                                    'COMPONENT_TEMPLATE' => 'quick_contact_form'
+                                ),
+                                false
+                            );?>
                             
                         </div>
                         <div class="column column-width-one-half">
