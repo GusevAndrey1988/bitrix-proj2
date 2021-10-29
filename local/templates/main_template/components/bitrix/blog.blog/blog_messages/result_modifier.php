@@ -5,6 +5,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
     die();
 }
 
+// Первая картинка поста используется для превью
+
 $postIdsList = [];
 foreach ($arResult['POST'] as $postId => $post)
 {
@@ -16,6 +18,9 @@ foreach ($arResult['POST'] as $postId => $post)
 
     $postIdsList[] = $post['ID'];
 }
+
+// Компонент почему-то не получает теги поста, поэтому делаем повторный запрос
+// для получения недостающей инфы
 
 $postsTagResult = \CBlogPost::GetList(
     ['ID' => 'DESC'],
@@ -39,10 +44,10 @@ foreach ($arResult['POST'] as $postId => $post)
 {
     $currentTagIds = explode(',', $postTagList[$postId]['CATEGORY_ID']);
     $arResult['POST'][$postId]['TAGS'] = $currentTagIds;
-    $tagsIdList = array_merge($tagsIdList, $currentTagIds);
+    $tagsIdList += array_flip($currentTagIds);
 }
 
-$tagsIdList = array_unique($tagsIdList);
+$tagsIdList = array_keys($tagsIdList);
 
 $tagsResult = CBlogCategory::GetList(
     ['ID' => 'DESC'],

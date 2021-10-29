@@ -1,149 +1,46 @@
 <?php require_once($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");?>
     <div id="primary" class="content-area column two-thirds">
         <main id="main" class="site-main" role="main">
-            <div class="grid bloggrid">
-            
-                <article>
-                    <header class="entry-header">
-                        <h1 class="entry-title"><a href="blog-single.html" rel="bookmark">Somewhere in time</a></h1>
-                        <div class="entry-meta">
-                            <span class="posted-on"><time class="entry-date published">April 12, 2016</time></span>						
-                            <span class="comments-link"><a href="#">Leave a comment</a></span>
-                        </div>
-                        <div class="entry-thumbnail">						
-                            <img src="https://via.placeholder.com/256" alt="">
-                        </div>
-                    </header>
-                    <div class="entry-summary">
-                        <p>
-                            When Mary Lennox was sent to Manor to live with her uncle everybody said she was the most disagreeablelooking child ever seen. It was true, too. She had a little thin face and a little thin body, thin light hair and a sour expression. Her hair was yellow, and her face was yellow because she <a class="more-link" href="blog-single.html">Read more</a>
-                        </p>
-                    </div>
-                    <footer class="entry-footer">
-                        <span class="cat-links">
-                            Posted in <a href="#" rel="category tag">audio</a>, <a href="#" rel="category tag">embed</a>, <a href="#" rel="category tag">media</a>
-                        </span>
-                    </footer>
-                </article>
-                
-                <article>
-                    <header class="entry-header">
-                        <h1 class="entry-title"><a href="blog-single.html" rel="bookmark">Thanks for watching</a></h1>
-                        <div class="entry-meta">
-                            <span class="posted-on"><time class="entry-date published">April 11, 2016</time></span>						
-                            <span class="comments-link"><a href="#">1 Comment</a></span>
-                        </div>
-                        <div class="entry-thumbnail">						
-                            <img src="https://via.placeholder.com/256" alt="">
-                        </div>
-                    </header>
-                    <div class="entry-summary">
-                        <p>
-                            When Mary Lennox was sent to Manor to live with her uncle everybody said she was the most disagreeablelooking child ever seen. It was true, too. She had a little thin face and a little thin body, thin light hair and a sour expression. Her hair was yellow, and her face was yellow because she <a class="more-link" href="blog-single.html">Read more</a>
-                        </p>
-                    </div>
-                    <footer class="entry-footer">
-                        <span class="cat-links">
-                            Posted in <a href="#" rel="category tag">audio</a>, <a href="#" rel="category tag">embed</a>, <a href="#" rel="category tag">media</a>
-                        </span>
-                    </footer>
-                </article>
-                
-
-                <article>
-                    <header class="entry-header">
-                        <h1 class="entry-title"><a href="blog-single.html" rel="bookmark">Dreaming Away</a></h1>
-                        <div class="entry-meta">
-                            <span class="posted-on"><time class="entry-date published">April 10, 2016</time></span>						
-                            <span class="comments-link"><a href="#">Leave a comment</a></span>
-                        </div>
-                        <div class="entry-thumbnail">						
-                            <img src="https://via.placeholder.com/256" alt="">
-                        </div>
-                    </header>
-                    <div class="entry-summary">
-                        <p>
-                            When Mary Lennox was sent to Manor to live with her uncle everybody said she was the most disagreeablelooking child ever seen. It was true, too. She had a little thin face and a little thin body, thin light hair and a sour expression. Her hair was yellow, and her face was yellow because she <a class="more-link" href="blog-single.html">Read more</a>
-                        </p>
-                    </div>
-                    <footer class="entry-footer">
-                        <span class="cat-links">
-                            Posted in <a href="#" rel="category tag">audio</a>, <a href="#" rel="category tag">embed</a>, <a href="#" rel="category tag">media</a>
-                        </span>
-                    </footer>
-                </article>
-                
-                <article>
-                    <header class="entry-header">
-                        <h1 class="entry-title"><a href="blog-single.html" rel="bookmark">Sunny Days</a></h1>
-                        <div class="entry-meta">
-                            <span class="posted-on"><time class="entry-date published">April 9, 2016</time></span>						
-                            <span class="comments-link"><a href="#">2 Comments</a></span>
-                        </div>
-                        <div class="entry-thumbnail">						
-                            <img src="https://via.placeholder.com/256" alt="">
-                        </div>
-                    </header>
-                    <div class="entry-summary">
-                        <p>
-                            When Mary Lennox was sent to Manor to live with her uncle everybody said she was the most disagreeablelooking child ever seen. It was true, too. She had a little thin face and a little thin body, thin light hair and a sour expression. Her hair was yellow, and her face was yellow because she <a class="more-link" href="blog-single.html">Read more</a>
-                        </p>
-                    </div>
-                    <footer class="entry-footer">
-                        <span class="cat-links">
-                            Posted in <a href="#" rel="category tag">audio</a>, <a href="#" rel="category tag">embed</a>, <a href="#" rel="category tag">media</a>
-                        </span>
-                    </footer>
-                </article>	
-            
-            
-                <article>
-                    <header class="entry-header">
-                        <h1 class="entry-title"><a href="blog-single.html" rel="bookmark">Holiday Travel</a></h1>
-                        <div class="entry-meta">
-                            <span class="posted-on"><time class="entry-date published">April 6, 2016</time></span>						
-                            <span class="comments-link"><a href="#">Leave a comment</a></span>
-                        </div>
-                        <div class="entry-thumbnail">						
-                            <img src="https://via.placeholder.com/256" alt="">
-                        </div>
-                    </header>
-                    <div class="entry-summary">
-                        <p>
-                            When Mary Lennox was sent to Manor to live with her uncle everybody said she was the most disagreeablelooking child ever seen. It was true, too. She had a little thin face and a little thin body, thin light hair and a sour expression. Her hair was yellow, and her face was yellow because she <a class="more-link" href="blog-single.html">Read more</a>
-                        </p>
-                    </div>
-                    <footer class="entry-footer">
-                        <span class="cat-links">
-                            Posted in <a href="#" rel="category tag">audio</a>, <a href="#" rel="category tag">embed</a>, <a href="#" rel="category tag">media</a>
-                        </span>
-                    </footer>
-                </article>
-                
-                <article>
-                    <header class="entry-header">
-                        <h1 class="entry-title"><a href="blog-single.html" rel="bookmark">Driving Summer</a></h1>
-                        <div class="entry-meta">
-                            <span class="posted-on"><time class="entry-date published">April 7, 2016</time></span>						
-                            <span class="comments-link"><a href="#">3 Comments</a></span>
-                        </div>
-                        <div class="entry-thumbnail">						
-                            <img src="https://via.placeholder.com/256" alt="">
-                        </div>
-                    </header>
-                    <div class="entry-summary">
-                        <p>
-                            When Mary Lennox was sent to Manor to live with her uncle everybody said she was the most disagreeablelooking child ever seen. It was true, too. She had a little thin face and a little thin body, thin light hair and a sour expression. Her hair was yellow, and her face was yellow because she <a class="more-link" href="blog-single.html">Read more</a>
-                        </p>
-                    </div>
-                    <footer class="entry-footer">
-                        <span class="cat-links">
-                            Posted in <a href="#" rel="category tag">audio</a>, <a href="#" rel="category tag">embed</a>, <a href="#" rel="category tag">media</a>
-                        </span>
-                    </footer>
-                </article>					
-                
-            </div>
+            <?php $APPLICATION->IncludeComponent(
+                'bitrix:blog.blog', 
+                'blog_messages', 
+                [
+                    'BLOG_URL' => 'SiteBlog',
+                    'BLOG_VAR' => '',
+                    'CACHE_TIME' => '7200',
+                    'CACHE_TIME_LONG' => '604600',
+                    'CACHE_TYPE' => 'A',
+                    'CATEGORY_ID' => '',
+                    'COMPONENT_TEMPLATE' => 'blog_messages',
+                    'DATE_TIME_FORMAT' => 'j F Y G:i',
+                    'DAY' => '',
+                    'FILTER_NAME' => 'arFilter',
+                    'IMAGE_MAX_HEIGHT' => '600',
+                    'IMAGE_MAX_WIDTH' => '600',
+                    'MESSAGE_COUNT' => '4',
+                    'MONTH' => '',
+                    'NAV_TEMPLATE' => 'modern',
+                    'PAGE_VAR' => '',
+                    'PATH_TO_BLOG' => '/blog',
+                    'PATH_TO_BLOG_CATEGORY' => '/blog/tag.php?category=#category#',
+                    'PATH_TO_POST' => '/blog/post?id=#post_id#',
+                    'PATH_TO_POST_EDIT' => '/blog/post-edit.php?id=#post_id#',
+                    'PATH_TO_SMILE' => '',
+                    'PATH_TO_USER' => '',
+                    'PATH_TO_POST_ADD' => '/blog/post-edit.php',
+                    'POST_PROPERTY_LIST' => [],
+                    'POST_VAR' => '',
+                    'RATING_TYPE' => '',
+                    'SEO_USER' => 'N',
+                    'SET_NAV_CHAIN' => 'N',
+                    'SET_TITLE' => 'N',
+                    'SHOW_RATING' => '',
+                    'USER_VAR' => '',
+                    'YEAR' => '',
+                    'USE_IMAGE_PLACEHOLDER' => 'Y'
+                ],
+                false
+            );?>
             <div class="clearfix">
             </div>
             <nav class="pagination"></nav>

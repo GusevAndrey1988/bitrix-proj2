@@ -1,0 +1,17 @@
+.site-blog-add-button-container {
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.site-blog-post-button-container {
+    padding: 10px 0
+}
+
+.site-blog-post-edit-button {
+    color: #0087bd;
+}
+
+.site-blog-post-delete-button {
+    color: #c40233;
+}
