@@ -15,7 +15,7 @@ $APPLICATION->SetTitle("");?><?$APPLICATION->IncludeComponent(
 		"IMAGE_MAX_HEIGHT" => "600",
 		"IMAGE_MAX_WIDTH" => "600",
 		"PAGE_VAR" => "",
-		"PATH_TO_BLOG" => "",
+		"PATH_TO_BLOG" => "/blog",
 		"PATH_TO_DRAFT" => "",
 		"PATH_TO_POST" => "",
 		"PATH_TO_POST_EDIT" => "/blog/post-edit.php?id=#post_id#",

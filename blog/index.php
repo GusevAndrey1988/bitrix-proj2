@@ -23,7 +23,7 @@
                     'PAGE_VAR' => '',
                     'PATH_TO_BLOG' => '/blog',
                     'PATH_TO_BLOG_CATEGORY' => '/blog/tag.php?category=#category#',
-                    'PATH_TO_POST' => '/blog/post?id=#post_id#',
+                    'PATH_TO_POST' => '/blog/post.php?id=#post_id#',
                     'PATH_TO_POST_EDIT' => '/blog/post-edit.php?id=#post_id#',
                     'PATH_TO_SMILE' => '',
                     'PATH_TO_USER' => '',
@@ -61,26 +61,34 @@
                 </div>
             </aside>
             
-            <aside id="recent-posts-2" class="widget widget_recent_entries">
-                <h4 class="widget-title">Recent Posts</h4>
-                <ul>
-                    <li>
-                        <a href="blog-single.html">Somewhere in time</a>
-                    </li>
-                    <li>
-                        <a href="blog-single.html">Thanks for watching!</a>
-                    </li>
-                    <li>
-                        <a href="blog-single.html/">Who could have thought?</a>
-                    </li>
-                    <li>
-                        <a href="blog-single.html">Text Alignement</a>
-                    </li>
-                    <li>
-                        <a href="blog-single.html">HTML Tags and Formatting</a>
-                    </li>
-                </ul>
-            </aside>
+            <?php $APPLICATION->IncludeComponent(
+                'bitrix:blog.new_posts',
+                'blog_recent_posts', 
+                [
+                    'BLOG_URL' => 'SiteBlog',
+                    'BLOG_VAR' => '',
+                    'CACHE_TIME' => '86400',
+                    'CACHE_TYPE' => 'A',
+                    'DATE_TIME_FORMAT' => 'd.m.Y H:i:s',
+                    'GROUP_ID' => '1',
+                    'MESSAGE_COUNT' => '5',
+                    'MESSAGE_LENGTH' => '100',
+                    'PAGE_VAR' => '',
+                    'PATH_TO_BLOG' => '/blog',
+                    'PATH_TO_POST' => '/blog/post.php?id=#post_id#',        
+                    'PATH_TO_GROUP_BLOG_POST' => '',        
+                    'PATH_TO_SMILE' => '',
+                    'PATH_TO_USER' => '',
+                    'POST_VAR' => '',
+                    'PREVIEW_HEIGHT' => '100',
+                    'PREVIEW_WIDTH' => '100',
+                    'SEO_USER' => 'N',
+                    'USER_VAR' => '',
+                    'USE_SOCNET' => 'N',
+                    'COMPONENT_TEMPLATE' => '.default'
+                ],
+                false
+            );?>
             
             <aside id="text-6" class="widget widget_text">
                 <h4 class="widget-title">Like us on Facebook</h4>
