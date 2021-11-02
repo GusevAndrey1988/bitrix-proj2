@@ -1,0 +1,24 @@
+.site-blog-comment-new-message,
+.site-blog-post-comment-message {
+    border: 1px solid #ccc;
+	border-radius: 0px;
+	color: #666;
+}
+
+.site-blog-post-comment {
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+.site-blog-post-comment-message {
+    padding: 10px 0 10px 10px;
+}
+
+.feed-add-post-form-but-wrap {
+	border-bottom: none;
+}
+
+.comments-area #errors {
+	margin-bottom: 20px;
+	color: #c40233;
+}

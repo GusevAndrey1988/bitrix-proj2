@@ -32,7 +32,7 @@
 <br>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:blog.post.comment", 
-	".default", 
+	"blog_comments", 
 	array(
 		"AJAX_PAGINATION" => "N",
 		"ALLOW_IMAGE_UPLOAD" => "N",
@@ -41,7 +41,7 @@
 		"BLOG_VAR" => "",
 		"CACHE_TIME" => "86400",
 		"CACHE_TYPE" => "A",
-		"COMMENTS_COUNT" => "25",
+		"COMMENTS_COUNT" => "5",
 		"COMMENT_ID_VAR" => "",
 		"DATE_TIME_FORMAT" => "d.m.Y H:i:s",
 		"EDITOR_CODE_DEFAULT" => "N",
@@ -53,7 +53,7 @@
 		"NO_URL_IN_COMMENTS" => "",
 		"NO_URL_IN_COMMENTS_AUTHORITY" => "",
 		"PAGE_VAR" => "",
-		"PATH_TO_BLOG" => "",
+		"PATH_TO_BLOG" => "/blog",
 		"PATH_TO_SMILE" => "",
 		"PATH_TO_USER" => "",
 		"POST_VAR" => "",
@@ -69,7 +69,7 @@
 		"USER_CONSENT_IS_LOADED" => "N",
 		"USER_VAR" => "",
 		"USE_ASC_PAGING" => "N",
-		"COMPONENT_TEMPLATE" => ".default"
+		"COMPONENT_TEMPLATE" => "blog_comments"
 	),
 	false
 );?><?php require_once($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");?>
