@@ -23,41 +23,47 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                 <p class="comment-notes">
                     <span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span>
                 </p>
+
+                <?php if (empty($arResult["User"])):?>
+                    <div class="wpcmsdev-columns">
+                        <p class="comment-form-author column column-width-one-third">
+                            <label for="user_name">Name <span class="required">*</span></label><input id="user_name" name="user_name" type="text" value="<?=htmlspecialcharsEx($_SESSION["blog_user_name"])?>" size="30" aria-required="true" required="required">
+                        </p>
+                        <p class="comment-form-email column column-width-one-third">
+                            <label for="user_email">Email <span class="required">*</span></label><input id="user_email" name="user_email" type="email" value="<?=htmlspecialcharsEx($_SESSION["blog_user_email"])?>" size="30" aria-describedby="email-notes" aria-required="true" required="required">
+                        </p>
+                        <?php if ($arParams['NOT_USE_COMMENT_TITLE'] != 'Y'):?>
+                            <p class="comment-form-url column column-width-one-third">
+                                <label for="url">Website</label><input id="url" name="subject" type="url" value="" size="30">
+                            </p>
+                        <?php endif?>
+                    </div>
+                <?php endif?>
+                
                 <p class="comment-form-comment">
                     <label for="comment">Comment</label>
                     <div id="comment" class="site-blog-comment-new-message">
                         <input type="hidden" name="USE_NEW_EDITOR" value="Y">
-                        <?php include($_SERVER["DOCUMENT_ROOT"].$templateFolder."/neweditor.php");?>
+                        <?php include($_SERVER['DOCUMENT_ROOT'] . $templateFolder . '/neweditor.php');?>
                     </div>
                 </p>
-                <?php if (empty($arResult["User"])):?>
-                    <p class="comment-form-author">
-                        <label for="user_name">Name <span class="required">*</span></label><input id="user_name" name="user_name" type="text" value="<?=htmlspecialcharsEx($_SESSION["blog_user_name"])?>" size="30" aria-required="true" required="required">
-                    </p>
-                    <p class="comment-form-email">
-                        <label for="user_email">Email <span class="required">*</span></label><input id="user_email" name="user_email" type="email" value="<?=htmlspecialcharsEx($_SESSION["blog_user_email"])?>" size="30" aria-describedby="email-notes" aria-required="true" required="required">
-                    </p>
+
+                <input type="hidden" name="blog_upload_cid" id="upload-cid" value="">
+
+                <?php if ($arResult['use_captcha'] === true):?>
+                    <input type="hidden" name="captcha_code" id="captcha_code" value="">
                 <?php endif?>
                 
-                <?php if ($arParams['NOT_USE_COMMENT_TITLE'] != 'Y'):?>
-                    <p class="comment-form-url">
-                        <label for="url">Website</label><input id="url" name="subject" type="url" value="" size="30">
+                <div class="site-blog-comment-submit-block">
+                    <?php if ($arResult['use_captcha'] === true):?>
+                        <label class="site-blog-comment-captcha-word-label" for="captcha_word">Enter the symbols <input type="text" name="captcha_word" id="captcha_word" value=""  tabindex="7"></label>
+                        <img src="" width="180" height="40" id="captcha" style="display:none;">
+                    <?php endif?>
+                    <p class="form-submit">
+                        <input tabindex="10" value="Post Comment" type="button" name="sub-post" id="submit" class="submit" onclick="createNewPost();">
                     </p>
-                <?php endif?>
-
-                <!-- TODO Форматировать капчу -->
-                <?php if ($arResult['use_captcha'] === true):?>
-                    <p>
-                        <input type="hidden" name="captcha_code" id="captcha_code" value="">
-                        <label for="captcha_word">Enter the numbers</label> <input type="text" size="30" name="captcha_word" id="captcha_word" value=""  tabindex="7">
-                    </p>
-                    <img src="" width="180" height="40" id="captcha" style="display:none;">
-                <?php endif?>
+                </div>
             
-                <p class="form-submit">
-                    <input tabindex="10" value="Post Comment" type="button" name="sub-post" id="submit" class="submit" onclick="createNewPost();">
-                    <input type="hidden" name="blog_upload_cid" id="upload-cid" value="">
-                </p>
                 <noscript>
                 </noscript>
             </form>
@@ -89,9 +95,14 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         <?php endif?>
     </div>
 <?php else:?>
-    <?php $APPLICATION->RestartBuffer()?>
     <?php 
+        // Этот код выполняется при добавлении нового коментария (ajax)
+
+        $APPLICATION->RestartBuffer();
+
+        /** @var array $comment Новый комментарий */
         $comment = $arResult['CommentsResult'][0][0];
+
         ob_start();
     ?>
 

@@ -22,3 +22,31 @@
 	margin-bottom: 20px;
 	color: #c40233;
 }
+
+.comment-form-comment {
+	margin-top: 20px;
+}
+
+.site-blog-comment-submit-block {
+	display: flex;
+
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+.site-blog-comment-captcha-word-label {
+	margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+	.site-blog-comment-submit-block {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.site-blog-comment-captcha-word-label,
+	#captcha,
+	.form-submit {
+		margin: 7px 0;
+	}
+}
