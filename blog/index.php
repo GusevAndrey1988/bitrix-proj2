@@ -98,16 +98,31 @@
                 </div>
             </aside>
             
-            <aside id="recent-comments-2" class="widget widget_recent_comments">
-                <h4 class="widget-title">Recent Comments</h4>
-                <ul id="recentcomments">
-                    <li class="recentcomments"><span>ThemePush</span> on <a href="blog-single.html">Male T-Shirt</a></li>
-                    <li class="recentcomments"><span>ThemePush</span> on <a href="blog-single.html">Male T-Shirt</a></li>
-                    <li class="recentcomments"><span><a href="#" rel="external nofollow" class="url">Mr WordPress</a></span> on <a href="blog-single.html">Thanks for watching!</a></li>
-                    <li class="recentcomments"><span>Maria</span> on <a href="blog-single.html">Gray Blouse</a></li>
-                    <li class="recentcomments"><span>Maria</span> on <a href="blog-single.html">Retro Dress</a></li>
-                </ul>
-            </aside>
+            <?php $APPLICATION->IncludeComponent(
+                'bitrix:blog.new_comments', 
+                'blog_recent_comments', 
+                [
+                    'BLOG_URL' => 'SiteBlog',
+                    'BLOG_VAR' => '',
+                    'CACHE_TIME' => '86400',
+                    'CACHE_TYPE' => 'A',
+                    'COMMENT_COUNT' => '5',
+                    'DATE_TIME_FORMAT' => 'd.m.Y H:i:s',
+                    'GROUP_ID' => '1',
+                    'MESSAGE_LENGTH' => '100',
+                    'PAGE_VAR' => '',
+                    'PATH_TO_BLOG' => '/blog',
+                    'PATH_TO_GROUP_BLOG_POST' => '',
+                    'PATH_TO_POST' => '/blog/post.php?id=#post_id#',
+                    'PATH_TO_SMILE' => '',
+                    'PATH_TO_USER' => '',
+                    'POST_VAR' => '',
+                    'SEO_USER' => 'N',
+                    'USER_VAR' => '',
+                    'COMPONENT_TEMPLATE' => 'blog_recent_comments'
+                ],
+                false
+            );?>
             
             <aside id="text-7" class="widget widget_text">
                 <h4 class="widget-title">Follow us</h4>

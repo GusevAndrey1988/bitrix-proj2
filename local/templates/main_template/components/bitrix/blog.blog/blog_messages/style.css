@@ -1,11 +1,17 @@
 .site-blog-add-button-container {
     margin: auto;
     margin-bottom: 20px;
+    padding: 10px 0;
     text-align: center;
+
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
 }
 
 .site-blog-post-button-container {
-    padding: 10px 0
+    padding: 10px 0;
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
 }
 
 .site-blog-post-edit-button {
